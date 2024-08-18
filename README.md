@@ -1,21 +1,21 @@
-Image captioning is a task that involves generating textual descriptions for images. This project combines computer vision (CNNs) and natural language processing (RNNs) to achieve this.
+This project deals with Image captioning which is a task that involves generating textual descriptions for images and we do this by combining computer vision (CNNs) and natural language processing (RNNs) .
 
 **Key steps:**
 
-Feature extraction: Uses a pre-trained CNN (DenseNet201) to extract features from images.
+_Feature extraction_: Uses a pre-trained CNN (DenseNet201) to extract features from images.
 
-Text preprocessing: Cleans and prepares caption text for training.
+_Text preprocessing_: Cleaned and prepared caption text for training.
 
-Model architecture: Employs an encoder-decoder framework with CNN and LSTM.
+_Model architecture_: Employed an encoder-decoder framework with CNN and LSTM.
 
-Training: Trains the model on image-caption pairs.
+_Training_: Trained the model on image-caption pairs.
 
-Inference: Generates captions for new images.
+_Inference_: Generated captions for new images.
 
-**Challenges and future work:**
+**Challenges and Future work**
 
-Overfitting: The model currently overfits due to limited data.
+_Overfitting_: The model currently overfits due to limited data.
 
-Caption quality: Generated captions can be redundant or inaccurate.
+_Caption quality_: Generated captions can be redundant or inaccurate.
 
 
