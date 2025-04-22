@@ -1,21 +1,20 @@
-This project deals with Image captioning which is a task that involves generating textual descriptions for images and we do this by combining computer vision (CNNs) and natural language processing (RNNs) .
+# 🖼️ Image Caption Generator using DenseNet201 + GRU
 
-**Key steps:**
+This repository contains an image captioning deep learning model that generates natural language descriptions for images. The model uses a **DenseNet201** as the image encoder and a **GRU-based RNN** as the decoder, trained on the **Flickr8k** dataset.
 
-_Feature extraction_: Uses a pre-trained CNN (DenseNet201) to extract features from images.
+## 🚀 Project Overview
 
-_Text preprocessing_: Cleaned and prepared caption text for training.
+- **Encoder**: DenseNet201 (pre-trained on ImageNet, excluding the final classification layer)
+- **Decoder**: GRU-based RNN that generates captions word-by-word
+- **Embedding Layer**: Trained from scratch to learn word representations
+- **Dataset**: Flickr8k (8,000 images + 5 captions per image)
+- **Loss Function**: Sparse Categorical Crossentropy (with masking for padded tokens)
+- **Optimizer**: Adam
 
-_Model architecture_: Employed an encoder-decoder framework with CNN and LSTM.
+---
 
-_Training_: Trained the model on image-caption pairs.
+## 🧠 Model Architecture
 
-_Inference_: Generated captions for new images.
-
-**Challenges and Future work**
-
-_Overfitting_: The model currently overfits due to limited data.
-
-_Caption quality_: Generated captions can be redundant or inaccurate.
-
-
+```text
+Input Image → DenseNet201 (CNN) → Fully Connected Layer → 
+→ Concatenate with Word Embedding → GRU → Dense Layer → Output Word Probabilities
